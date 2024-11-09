@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+  .side_nav_btn {
+    @apply w-full h-10 text-base text-left pl-4 hover:bg-zinc-800 duration-150 rounded-lg text-zinc-400
+  }
+
+  .side_nav_icon{
+    @apply text-xl text-center w-6 mr-2
+  }
+}

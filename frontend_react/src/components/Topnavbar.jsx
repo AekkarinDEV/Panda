@@ -2,7 +2,7 @@
 
 function Topnavbar() {
   return (
-    <div className="bg-zinc-800 h-14 fixed top-0 z-0 w-screen">
+    <div className="bg-zinc-800 h-14 fixed top-0 z-40 w-screen">
         <div className="h-0.5 bg-zinc-400"></div>
         <div className="grid grid-cols-3 h-full">
 

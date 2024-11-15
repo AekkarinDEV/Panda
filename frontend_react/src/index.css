@@ -12,4 +12,8 @@
   .side_nav_icon{
     @apply text-xl text-center w-6 mr-2
   }
+
+  .login_input{
+    @apply h-12 rounded-xl px-3
+  }
 }

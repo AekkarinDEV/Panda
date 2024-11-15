@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 function Topnavbar() {
   return (
@@ -23,7 +23,9 @@ function Topnavbar() {
             </div>
    
             <div className="flex justify-end pr-10 items-center gap-4">
-                <button className="bg-zinc-200 h-10 px-4 rounded-3xl hover:bg-zinc-400 hover:text-zinc-200 duration-100 font-semibold">Log in</button>
+                <button className="bg-zinc-200 h-10 px-4 rounded-3xl hover:bg-zinc-400 hover:text-zinc-200 duration-100 font-semibold">
+                     <Link to={"log_in"}>Log in</Link>
+                </button>
                 <button className="hover:bg-zinc-700 h-10 w-10 rounded-3xl text-3xl duration-150"><p className=" w-10 text-zinc-200 text-center">•••</p></button>
             </div>
         </div>

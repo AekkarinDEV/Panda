@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+const url = process.env.REACT_APP_API_URL;
 
 
 function Signup() {
@@ -11,10 +12,10 @@ function Signup() {
             <p className="font-normal pl-1 text-zinc-400 mb-6">
             By continuing, you agree to our User Agreement and acknowledge that you understand the Privacy Policy.
             </p>
-            <form action="">
-                <input type="text" className="login_input" placeholder="*Email"/>
-                <input type="text" className="login_input" placeholder="*username"/>
-                <input type="text" className="login_input" placeholder="*password"/>
+            <form method="post" action={url + "/auth/sign_up"} >
+                <input type="text" className="login_input" placeholder="*Email" name="email"/>
+                <input type="text" className="login_input" placeholder="*username" name="username"/>
+                <input type="text" className="login_input" placeholder="*password" name="password"/>
                 <input type="text" className="login_input" placeholder="*confirm password"/>
                 <p className="inline-block mr-1 mb-4 pl-2">Already has account?</p>
                 <Link to={"/log_in"}>log in</Link>

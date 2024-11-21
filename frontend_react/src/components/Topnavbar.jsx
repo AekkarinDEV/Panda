@@ -12,8 +12,11 @@ function Topnavbar() {
             )
         }else{
             return (<>
-                <button className="text-xl flex items-center"><i className="fa-solid fa-plus pr-1"></i> create</button>
-                <img src="profile-icon-design-free-vector.jpg" alt="" className="h-9 rounded-3xl" />
+                <button className="text-xl flex items-center text-zinc-300 border-[3px] px-3 rounded-3xl border-zinc-300">
+                    <i className="fa-solid fa-plus pr-1 fa-sm mr-1"></i> 
+                    <p className="pb-1 text-md font-sourGummy">post</p>
+                </button>
+                <img src="profile-icon-design-free-vector.jpg" alt="" className="h-9 rounded-3xl ml-3" />
                 </>)
         }
     }

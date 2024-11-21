@@ -1,9 +1,12 @@
 
-function CreateCommu() {
+function CreateCommu({props}) {
+    function closeMenu(){
+        props.setOpenCC(props.openCC = "hidden")
+        console.log(props)
+    }
              return (
                 <>
-                
-                <div className="h-screen w-screen fixed bg-black/50 top-0 z-50 flex justify-center items-center text-white ">
+                <div id="create_commu_menu" className={`${props.openCC} h-screen w-screen fixed bg-black/50 top-0 z-50 justify-center items-center text-white `}>
                     <div className="bg-zinc-900 h-fit w-2/4 px-8 py-6 rounded-lg shadow-xl shadow-black">
                         <div className="flex">
                             <div className="w-10/12">
@@ -11,7 +14,7 @@ function CreateCommu() {
                                 <p className="text-sm">A name and description help people understand what your community is all about.</p>
                             </div>
                             <div className="w-2/12 flex justify-end">
-                                <button className="rounded-full bg-zinc-800 w-10 h-10 text-zinc-400"><i className="fa-solid rotate-45 fa-plus"></i></button>
+                                <button className="rounded-full bg-zinc-800 w-10 h-10 text-zinc-400" onClick={closeMenu}><i className="fa-solid rotate-45 fa-plus"></i></button>
                             </div>
                         </div>
                         

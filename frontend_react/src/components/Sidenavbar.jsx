@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom"
 
 
-function Sidenavbar() {
-
+function Sidenavbar({props}) {
+  function openCCmenu() {
+    props.setOpenCC(props.openCC = "flex")
+  }
   return (
-    <div className="bg-zinc-900 w-[18%]  z-10 h-screen pt-14 fixed top-0">
+    <div className="xl:bg-zinc-900 w-[18%]  z-10 h-screen pt-14 fixed top-0 sm:bg-slate-50">
         <div className=" bg-zinc-900 overflow-auto px-4 pt-3 ">
             <button className="side_nav_btn"><Link to="/"><i className="fa-solid fa-house side_nav_icon"></i>Home</Link></button>
             <button className="side_nav_btn"><Link to="/popular"><i className="fa-solid fa-fire side_nav_icon"></i>Popular</Link></button>
@@ -12,7 +14,7 @@ function Sidenavbar() {
         </div>
 
         <div className="px-4 ">
-          <button className="side_nav_btn"><i className="fa-solid fa-plus pr-1"></i> Create a community</button>
+          <button className="side_nav_btn" onClick={openCCmenu}><i className="fa-solid fa-plus pr-1"></i> Create a community</button>
 
         </div>
     </div>

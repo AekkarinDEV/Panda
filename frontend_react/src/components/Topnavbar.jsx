@@ -1,6 +1,23 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
 function Topnavbar() {
+    const [islogin, setIsLogin] = useState(true);
+    function loginOrProfile(status) {
+        if(!status){
+            return(
+            <button className="bg-zinc-200 h-10 px-4 rounded-3xl hover:bg-zinc-400 hover:text-zinc-200 duration-100 font-semibold">
+                     <Link to={"/log_in"}>Log in</Link>
+             </button>
+            )
+        }else{
+            return (<>
+                <button className="text-xl flex items-center"><i className="fa-solid fa-plus pr-1"></i> create</button>
+                <img src="profile-icon-design-free-vector.jpg" alt="" className="h-9 rounded-3xl" />
+                </>)
+        }
+    }
+
   return (
     <div className="bg-zinc-800 h-14 fixed top-0 z-40 w-screen">
         <div className="h-0.5 bg-zinc-400"></div>
@@ -23,10 +40,8 @@ function Topnavbar() {
             </div>
    
             <div className="flex justify-end pr-10 items-center gap-4">
-                <button className="bg-zinc-200 h-10 px-4 rounded-3xl hover:bg-zinc-400 hover:text-zinc-200 duration-100 font-semibold">
-                     <Link to={"log_in"}>Log in</Link>
-                </button>
-                <button className="hover:bg-zinc-700 h-10 w-10 rounded-3xl text-3xl duration-150"><p className=" w-10 text-zinc-200 text-center">•••</p></button>
+                {loginOrProfile(islogin)}
+                <button className="hover:bg-zinc-700 h-10 w-10 rounded-3xl text-3xl duration-150"><p className=" w-10 text-zinc-200 text-center pb-1">•••</p></button>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@ function TopCommu() {
   return(
     <>
       <div className="flex pl-5 bg-zinc-800 py-2 items-center gap-1 ">
-        <img src="panda_logo.png" alt="" className="h-8 w-8 rounded-full"/>
+        <img src="profile-icon-design-free-vector.jpg" alt="" className="h-8 w-8 rounded-full"/>
         <div>
           <h3 className="text-zinc-300">p/Pandacommu</h3>
           <p className="text-xs text-zinc-400">100000 member</p>

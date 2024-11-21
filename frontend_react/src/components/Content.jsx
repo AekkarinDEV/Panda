@@ -7,6 +7,10 @@ function Content() {
         <Post/>
         <Post/>
         <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
     </div>
   )
 }

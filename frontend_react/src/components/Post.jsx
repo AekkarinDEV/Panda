@@ -4,29 +4,41 @@ function Post() {
 
   const [postScore, setPostscore] = useState(50)  
   let [likeOrDislike, resetScore] = useState(0)
+  const[ likeButtonBG,setLikeBG ] = useState("bg-zinc-700")
+  const[ dislikeButtonBG, setDislikeBG]  = useState("bg-zinc-700")
 
   const plusPostscore = () => {
+    setDislikeBG("bg-zinc-700")
     if(likeOrDislike == 0){
         setPostscore(postScore + 1 )
         resetScore(likeOrDislike = 1)
+        setLikeBG("bg-zinc-400")
     }else if(likeOrDislike == -1){
         setPostscore(postScore + 2)
         resetScore(likeOrDislike = 1)
+        setLikeBG("bg-zinc-400")
     }else{
         setPostscore(postScore - 1 )
         resetScore(likeOrDislike = 0)
+        setLikeBG("bg-zinc-700")
     }
 }
   const dePostscore = () => {
+    setLikeBG("bg-zinc-700")
     if(likeOrDislike == 0){
         setPostscore(postScore - 1 )
         resetScore(likeOrDislike = -1)
+        setDislikeBG("bg-zinc-400")
     }else if(likeOrDislike == +1){
         setPostscore(postScore - 2)
         resetScore(likeOrDislike = -1)
+        setDislikeBG("bg-zinc-400")
+
     }else{
         setPostscore(postScore + 1 )
         resetScore(likeOrDislike = 0)
+        setDislikeBG("bg-zinc-700")
+
     }
   }
 
@@ -52,11 +64,11 @@ function Post() {
 
         <div className="w-full flex gap-2">
             <div className="w-fit grid grid-cols-3 items-center bg-zinc-700 rounded-3xl" >
-                <button className="rounded-3xl hover:bg-zinc-500 w-8 h-8 fa-lg" onClick={plusPostscore} >
+                <button className={`rounded-3xl ${likeButtonBG} hover:bg-zinc-500 w-8 h-8 fa-lg`} onClick={plusPostscore} id="like_button" >
                     <i className="fa-regular fa-thumbs-up"></i>
                 </button>
                 <p className="text-center text-xs font-semibold">{postScore}</p>
-                <button className="rounded-3xl hover:bg-zinc-500 w-8 h-8 fa-flip-vertical fa-lg " onClick={dePostscore}>
+                <button className={`rounded-3xl ${dislikeButtonBG} hover:bg-zinc-500 w-8 h-8 fa-flip-vertical fa-lg `} onClick={dePostscore}>
                     <i className="fa-regular fa-thumbs-up">
                     </i>
                 </button>

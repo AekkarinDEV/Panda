@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
-function Topnavbar() {
+function Topnavbar({props}) {
     const [islogin, setIsLogin] = useState(true);
+    function openPostMenu() {
+        props.setOpenPost(props.openPost = "flex");
+      }
     function loginOrProfile(status) {
         if(!status){
             return(
@@ -12,9 +15,9 @@ function Topnavbar() {
             )
         }else{
             return (<>
-                <button className="text-xl flex items-center text-zinc-300 border-[3px] px-3 rounded-3xl border-zinc-300">
+                <button className="text-xl flex items-center text-zinc-300 border-[3px] px-3 rounded-3xl border-zinc-300" onClick={openPostMenu}>
                     <i className="fa-solid fa-plus pr-1 fa-sm mr-1"></i> 
-                    <p className="pb-1 text-md font-sourGummy">post</p>
+                    <p className="pb-1 text-md font-sourGummy" >post</p>
                 </button>
                 <img src="profile-icon-design-free-vector.jpg" alt="" className="h-9 rounded-3xl ml-3" />
                 </>)
@@ -27,6 +30,7 @@ function Topnavbar() {
         <div className="grid grid-cols-3 h-full">
 
             <div className="h-full pl-3 flex items-center">
+                <button className="h-12 w-12 bg-white md:hidden"></button>
                 <div className="h-full w-14 mr-2">
                     <img src="panda_logo.png" alt="pand_logo"/>
                 </div>

@@ -4,7 +4,7 @@ import Sidenavbar from "../components/Sidenavbar"
 import Popular from "../components/Popular"
 import Content from "../components/Content"
 import CreateCommu from "../components/CreateCommu"
-import CreatePost from "../components/createPost"
+import CreatePost from "../components/CreatePost"
 
 import { useState } from "react"
 

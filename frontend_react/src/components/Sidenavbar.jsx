@@ -6,11 +6,9 @@ function Sidenavbar({props}) {
     props.setOpenCC(props.openCC = "flex")
   }
 
-  function openPostMenu() {
-    props.setOpenPost("flex");
-  }
+  
   return (
-    <div className="bg-zinc-900 w-[18%]  z-10 h-screen pt-14 fixed top-0 ">
+    <div className="bg-zinc-900 w-[18%]  z-10 h-screen pt-14 fixed top-0 hidden ">
         <div className=" bg-zinc-900 overflow-auto px-4 pt-3 ">
             <button className="side_nav_btn"><Link to="/"><i className="fa-solid fa-house side_nav_icon"></i>Home</Link></button>
             <button className="side_nav_btn"><Link to="/popular"><i className="fa-solid fa-fire side_nav_icon"></i>Popular</Link></button>

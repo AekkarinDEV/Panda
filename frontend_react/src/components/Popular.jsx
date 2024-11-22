@@ -14,7 +14,7 @@ function TopCommu() {
 
 function Popular() {
   return (
-    <div className="w-3/12 h-screen top-0  right-0 fixed bg-zinc-900 pt-20 pl-3 pr-20 ">
+    <div className="w-3/12 h-screen top-0  right-0 fixed bg-zinc-900 pt-20 pl-3 pr-20 hidden">
       <div className="w-full bg-zinc-800 px-4 py-2 rounded-lg">
         <h2 className="mb-4 text-zinc-200">Popular Communities</h2>
         <TopCommu/>

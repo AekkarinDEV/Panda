@@ -38,20 +38,19 @@ function Post() {
         setPostscore(postScore + 1 )
         resetScore(likeOrDislike = 0)
         setDislikeBG("bg-zinc-700")
-
     }
   }
 
   return (
-    <div className="bg-zinc-800 rounded-lg mb-3 px-4 py-3  m-auto w-2/4 grid gap-2">
+    <div className="bg-zinc-800 rounded-lg mb-3 px-4 py-3  m-auto w-4/4 grid gap-2">
         <div className="flex">
-            <div className="flex w-1/2">
-                <img src="profile-icon-design-free-vector.jpg" alt="commu_profile" className="h-7 mr-2 rounded-3xl" />
+                <img src="profile-icon-design-free-vector.jpg" alt="commu_profile" className="h-10 mt-1 mr-2 rounded-3xl" />
+            <div className=" w-1/2">
                 <a className="text-zinc-300 mr-2">p/Pandacommu</a>
-                <p className="text-sm text-end text-zinc-500 pt-[3px]">• 5 hr.ago</p>
+                <p className="text-sm  text-zinc-500 pt-[3px]">• 5 hr.ago</p>
             </div>
-            <div className="flex justify-end w-1/2 gap-2">
-                <button className="bg-zinc-400 rounded-2xl px-2 text-xs font-bold pb-0.5">join</button>
+            <div className="flex justify-end w-1/2 gap-2 items-center">
+                <button className="bg-zinc-400 rounded-2xl px-3 h-7 text-xs font-bold ">join</button>
                 <button className="px-1 text-zinc-300">•••</button>
             </div>
         </div>

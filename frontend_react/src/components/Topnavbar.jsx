@@ -19,7 +19,7 @@ function Topnavbar({props}) {
                     <i className="fa-solid fa-plus pr-1 fa-sm mr-1"></i> 
                     <p className="pb-1 text-md font-sourGummy" >post</p>
                 </button>
-                <img src="profile-icon-design-free-vector.jpg" alt="" className="h-9 rounded-3xl ml-3" />
+                <img src="profile-icon-design-free-vector.jpg" alt="" className="h-9 rounded-3xl ml-3 hidden" />
                 </>)
         }
     }
@@ -27,17 +27,17 @@ function Topnavbar({props}) {
   return (
     <div className="bg-zinc-800 h-14 fixed top-0 z-40 w-screen">
         <div className="h-0.5 bg-zinc-400"></div>
-        <div className="grid grid-cols-3 h-full">
+        <div className="grid grid-cols-2 h-full">
 
-            <div className="h-full pl-3 flex items-center">
-                <button className="h-12 w-12 bg-white md:hidden"></button>
-                <div className="h-full w-14 mr-2">
-                    <img src="panda_logo.png" alt="pand_logo"/>
+            <div className="h-full pl-2 flex items-center">
+                <button className="h-12 w-12  md:hidden text-zinc-500"><i className="fa-solid fa-2xl fa-bars"></i></button>
+                <div className="h-full w-[55px] mr-2 flex items-center">
+                    <img src="panda_logo.png" alt="pand_logo" />
                 </div>
                 <h1 className="text-zinc-200 font-sourGummy text-3xl font-semibold">PANDA</h1>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-center hidden">
                 <i className="fa-solid fa-magnifying-glass absolute pl-4 text-zinc-800"></i>
                 <form action="" method="" className="w-full">
                     <input type="text" name="search_input" placeholder="Search on Panda"
@@ -48,7 +48,7 @@ function Topnavbar({props}) {
    
             <div className="flex justify-end pr-10 items-center gap-4">
                 {loginOrProfile(islogin)}
-                <button className="hover:bg-zinc-700 h-10 w-10 rounded-3xl text-3xl duration-150"><p className=" w-10 text-zinc-200 text-center pb-1">•••</p></button>
+                <button className="hidden hover:bg-zinc-700 h-10 w-10 rounded-3xl text-3xl duration-150"><p className=" w-10 text-zinc-200 text-center pb-1">•••</p></button>
             </div>
         </div>
     </div>
